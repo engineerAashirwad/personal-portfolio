@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: hsl(0, 0%, 100%);
+    /* width: 100vw;
+    height: 100vh; */
+    /* position: relative; */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-container {
+    font-size: 22px;
+    display: flex;
+    padding: 0 35px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(277, 100%, 72%);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 2px 10px 3px hsl(0, 0%, 70%);
+    width: 80%;
+    height: 50px;
+}
+
+.portfolio-name {
+    font-size: 28px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 30px;
+}
+
+.nav-btn ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-btn ul li{
+    margin: 5px 12px;
+    padding: 5px;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.hero{
+    background-color: hsl(207, 100%, 98%);
+    position: absolute;
+    left: 200px;
+    top: 120px;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: -1px 6px 20px hsl(0, 0%, 70%);
+    min-width: 25%;
+    min-height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me{
+    color: hsl(0, 0%, 12%);
+    font-size: 40px;
+    text-align: -webkit-auto;
+}
+
+.name{
+    font-size: 50px;
+}
+
+.profession{
+    font-size: 22px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: hsl(240, 100%, 50%);
+}
+
+.profile-pic{
+    background-color: bisque;
+    position: absolute;
+    left: 950px;
+    top: 100px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: 1px 3px 20px hsl(0, 0%, 70%);
+}
+
+.profile-pic img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
