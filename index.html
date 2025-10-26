@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aashirwad Singh - Personal Portfolio</title>
+
+    <!-- Google Fonts: Roboto (for body) and Roboto Mono (for 'tech' text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons (skills, contact links) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ======== HEADER / NAVIGATION ======== -->
+    <header>
+        <nav>
+            
+            <a href="#home" class="nav-logo">&lt; AashirwadSingh /&gt;</a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ======== SECTION 1: HOME / HERO ======== -->
+        <section id="home">
+            <h1>Hello, I am
+                <span class="code-name">&lt; Aashirwad Singh /&gt;</span>
+            </h1>
+
+            <!-- The JavaScript will type out these subtitles -->
+            <h2 class="subtitle">I'm a <span id="typing-text"></span><span class="typing-cursor"></span></h2>
+
+            <div class="home-cta">
+                <a href="#contact" class="btn">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- ======== SECTION 2: ABOUT ======== -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+
+                <p>
+                    I'm a passionate Computer Science student currently navigating the exciting world of
+                    technology. I'm learning various things and strengthening my foundations in languages like C/C++,
+                    Python, JavaScript and Java.
+                </p>
+                <p>
+                    I thrive on solving problems and building things from the ground up. Whether it's crafting a
+                    responsive website like this portfolio that you are seeing right now or diving into complex
+                    algorithms, I'm always eager to learn and grow. My goal is to leverage my skills to create
+                    meaningful applications that make a difference.
+                </p>
+                <p>
+                    When I'm not coding, I enjoy Gaming, and exploring new tech trends.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- ======== SECTION 3: SKILLS ======== -->
+        <section id="skills">
+            <h2>{ My Skills }</h2>
+            <div class="skills-grid">
+
+                <!-- Fontawesome didn't have any icon for C++. I didn't remove the <i> tag because I coded it so that if I add the icon in future the layout will not be affected. -->
+                <div class="skill-card">
+                    <i class="fa-solid fa-c-plus-plus"></i>
+                    <p>C++</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-python"></i>
+                    <p>Python</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-java"></i>
+                    <p>Java</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-html5"></i>
+                    <p>HTML5</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p>CSS3</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-js"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-react"></i>
+                    <p>React</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-node"></i>
+                    <p>NodeJS</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-database"></i>
+                    <p>MongoDB</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <p>Git</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======== SECTION 4: PROJECTS ======== -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Just Duplicate the Project Card below to make new project cards. Heh! you're right, these are reusable design. -->
+
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <h3>Personal Portfolio</h3>
+                    <p>
+                        Personal Portfolio created using HTML5, CSS3 and JavaScript. My very first serious project after I started learning Web Development. This portfolio is still not the best I can make, I am still learning. I plan to pick this up again in the future.
+                    </p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>CSS</span>
+                        <span>HTML</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <h3>Will be revealed soon...</h3>
+                    <p>
+                        Work in progress...
+                    </p>
+                    <div class="project-tech">
+                        <span>N/A</span>
+                        <!-- <span>N/A</span>
+                        <span>N/A</span> -->
+                    </div>
+                    <div class="project-links">
+                        <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a> -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======== SECTION 5: EXPERIENCE ======== -->
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-timeline">
+
+                <!-- Same as the Project section, I made these Experience cards reusable. -->
+                <div class="experience-item">
+                    <h3>No Experience as of yet...</h3>
+                    <span class="date">N/A</span>
+                    <ul>
+                        <li>Looking for opportunities...</li>
+                        <!-- <li>N/A</li>
+                        <li>N/A</li> -->
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======== SECTION 6: CONTACT ======== -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>
+                The Form below is only there for looks (every portfolio had it so... and it looks cool 😌). I didn't
+                code the backend yet and I don't have access to services like Formspree or Netlify Forms 🙂.
+            </p>
+
+            
+            <!-- This is a visual-only form. To make it work, 
+            I have to code a backend or I can use services like Formspree / Netlify Forms (Which I will not, I will code my own backend). -->
+           
+            <form action="#" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <div class="contact-links">
+
+                <a href="https://github.com/engineerAashirwad" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/aashirwad-singh-1116a7300" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="mailto:singhaashirwad72@gmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ======== FOOTER ======== -->
+    <footer>
+        <p>Copyright &copy; 2025 Aashirwad Singh, Inc. All rights reserved | Built by Aashirwad Singh</p>
+        <p>Typing animation inspired by CodeWithHarry's Website. Coded with Keyboa-- passion ^3^</p>
+    </footer>
+
+
+    <!-- ======== JAVASCRIPT ======== -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

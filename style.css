@@ -1,0 +1,541 @@
+:root {     /* --- [ Global Styles & CSS Variables ] --- */
+    --dark-navy: #0a192f;
+    /* Main background */
+    --light-navy: #112240;
+    /* Card/element background */
+    --lightest-navy: #233554;
+    /* Border color */
+    --slate: #8892b0;
+    /* Lighter text */
+    --light-slate: #a8b2d1;
+    /* Main text */
+    --lightest-slate: #ccd6f6;
+    /* Heading text */
+    --accent-color: #64ffda;
+    /* Bright teal/cyan */
+
+    --font-sans: 'Roboto', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--dark-navy);
+    color: var(--light-slate);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Make Portfolio scrollbar styled. The CSS properties for styling Scrollbar took me half a day to find. */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--dark-navy);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--lightest-navy);
+    border-radius: 20px;
+    border: 3px solid var(--dark-navy);
+}
+
+section {
+    padding: 100px 10%;
+    min-height: 100vh;
+}
+
+/* Section heading style */
+h2 {
+    font-family: var(--font-mono);
+    font-size: 2.5rem;
+    color: var(--lightest-slate);
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Decorative line under heading */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--lightest-slate);
+}
+
+/* --- [ Header & Navigation ] --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem 5%;
+    /* Frosted glass effect */
+    background: rgba(10, 25, 47, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--lightest-navy);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 5px var(--accent-color);
+}
+
+/* --- [ 1. Hero/Home Section ] --- */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 12%;
+    min-height: 100vh;
+}
+
+#home h1 {
+    font-family: var(--font-mono);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    /* Responsive font size */
+    color: var(--lightest-slate);
+    margin: 0;
+}
+
+/* This is the < Aashirwad Singh /> part */
+#home .code-name {
+    color: var(--accent-color);
+    display: block;
+    /* Puts it on a new line */
+}
+
+#home .subtitle {
+    font-family: var(--font-mono);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: var(--slate);
+    margin-top: 10px;
+}
+
+/* Blinking cursor for the typing effect */
+.typing-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.8rem;
+    background-color: var(--accent-color);
+    animation: blink 1s infinite;
+    margin-left: 5px;
+    position: relative;
+    bottom: -4px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.home-cta {
+    margin-top: 40px;
+}
+
+/* "Techie" button style */
+.btn {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    padding: 12px 20px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+
+/* --- [ 2. About Section ] --- */
+#about {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-content {
+    font-size: 1.1rem;
+    color: var(--light-slate);
+    text-align: left;
+    line-height: 1.7;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+/* --- [ 3. Skills Section ] --- */
+.skills-grid {
+    display: grid;
+    /* Responsive grid: min 120px, max 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: var(--light-navy);
+    border-radius: 8px;
+    padding: 25px 20px;
+    text-align: center;
+    border: 1px solid var(--lightest-navy);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-color);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    /* Icon size */
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--lightest-slate);
+    font-weight: 700;
+}
+
+/* --- [ 4. Projects Section ] --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--light-navy);
+    border-radius: 8px;
+    border: 1px solid var(--lightest-navy);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-color);
+}
+
+.project-card h3 {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    color: var(--lightest-slate);
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    /* Makes description take available space */
+}
+
+.project-tech {
+    margin-bottom: 20px;
+}
+
+/* Little tags for tech used */
+.project-tech span {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: var(--dark-navy);
+    color: var(--slate);
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.project-links a {
+    font-family: var(--font-mono);
+    margin-right: 15px;
+    font-size: 1.1rem;
+}
+
+.project-links a i {
+    margin-right: 5px;
+}
+
+/* --- [ 5. Experience Section ] --- */
+.experience-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.experience-item {
+    background: var(--light-navy);
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(5px);
+}
+
+.experience-item h3 {
+    font-family: var(--font-mono);
+    color: var(--lightest-slate);
+    font-size: 1.3rem;
+}
+
+.experience-item .date {
+    font-family: var(--font-mono);
+    color: var(--slate);
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.experience-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience-item li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+}
+
+/* Custom bullet point */
+.experience-item li::before {
+    content: '>';
+    /* Techie-style bullet */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+
+/* --- [ 6. Contact Section ] --- */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: var(--font-mono);
+    margin-bottom: 5px;
+    color: var(--light-slate);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--light-navy);
+    border: 1px solid var(--lightest-navy);
+    border-radius: 4px;
+    color: var(--lightest-slate);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    /* Use the .btn style from hero section */
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.contact-links {
+    margin-top: 40px;
+}
+
+.contact-links a {
+    font-size: 2.5rem;
+    /* Big icons */
+    margin: 0 20px;
+    color: var(--slate);
+}
+
+.contact-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* --- [ Footer ] --- */
+footer {
+    padding: 30px;
+    text-align: center;
+    font-family: var(--font-mono);
+    color: var(--slate);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--lightest-navy);
+}
+
+/* --- [ Below code makes the design Responsive] --- */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+    #home {
+        padding: 0 8%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #home .code-name {
+        display: inline;
+        /* Back to inline on mobile */
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* --- Responsive Nav --- */
+    /* This is a simple solution. A real hamburger menu needs JS but I wasn't planning on using JS */
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-logo {
+        margin-bottom: 15px;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Stack projects on mobile */
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 15px;
+    }
+
+    .contact-links a {
+        font-size: 2rem;
+        margin: 0 10px;
+    }
+}
